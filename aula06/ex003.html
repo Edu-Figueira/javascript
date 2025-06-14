@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro programa...</title>
+    <style>
+        body {
+            background-color: rgb(94, 94, 209);
+            color: white;
+            font: normal 20pt Arial;
+        }
+        h1 {
+            color: rgb(228, 228, 27);
+        }   
+    </style>
+</head>
+<body>
+    <h1>Olá, mundo!</h1>
+    <p>Já me livrei da maldição.</p>
+
+    <!--O sinal de + em JS serve tanto para contenar dados quanto para somá-los aritmeticamente.-->
+    <script>        
+        var n1 = Number.parseFloat(window.prompt('Digite um número: ')) //o comando prompt trata o dado como string, mesmo que seja número. É preciso fazer uma conversão de string para número para mudar isso. Essa conversão está sendo inserida no próprio comando da variável. Perceba que o prompt está dentro de parseFloat.   
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        window.alert('A soma dos valores é: ' + s +'.')                
+    </script>
+    <!-- Convertendo String para Número em JS (esquemas de cores no bloquinho):
+    - Number.parseInt(n) -> converte um número para um número inteiro.
+    - Number.parselFloat(n) -> converte para um número real, com vírgula, ou seja, com "valor flutuante", aquele que vem depois da vírgula. Números inteiros são aceitos normalmente.
+    - Number(n) -> Comando mais moderno, automaticamente identifica se o número é inteiro ou real e faz a conversão para o tipo definido. Este comando não elimina as outras duas, ainda pode haver situaçãoes em que precisamos tratar como real ou inteiro forçosamente. A nível de ilustração, a conversão feita em n1 ficaria simplesmente assim: "Number(window.prompt('Digite um número: '))".
+
+    Convertendo Número para String>
+    - String(n) -> onde "n" é o valor que quero converter.
+    - n.toString() -> o valor que quero converter vindo na frente. Exemplo convertendo o "s" da variável de soma que criamos:
+    window.alert('A soma dos valores é: ' + String(s) +'.'); ou
+    window.alert('A soma dos valores é: ' + s.toString() +'.').
+    -->
+</body>
+</html>
