@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    
+    <!--Agora dois exemplo de outros comandos de string que podem ser combinados com uma variável ou dado inserido pelo usuário:
+    - .lenght [ex.: s.lenght] -> Não tem parênteses no final, portanto é um atributo. Mostra quantos caracteres tem a string inserida pelo usuário.
+    - .toUpperCase() [ex.: s.toUpperCase()] -> Mostra os caracteres da string escrita pelo usuário em caixa alta.
+    - .toLowerCase() [ex.: s.toLowerCase()] -> Mostra os caracteres da string escrita pelo usuário todos em minúsculo.
+    -->
+    <script>
+        var nome = window.prompt('Qual é seu nome?')
+        document.writeln(`Olá, ${nome}.<br> Seu nome tem ${nome.length} letras.`) //enquanto o "write" escreve o conteúdo entre conchetes e aspas/crases direto, o "writeln" entende que aquele é uma fim de período/frase e dá o espaço necessário antes do próximo(a). Para quebrar linha, basta o usar o <br> dentro do texto entre aspas/crases e parênteses.
+        document.writeln(`Seu nome em maiúsculas fica ${nome.toUpperCase()}!`)
+        document.write(`Seu nome em minúsculas fica ${nome.toLowerCase()}.`)
+    </script>
+</body>
+</html>
