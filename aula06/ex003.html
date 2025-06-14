@@ -24,7 +24,7 @@
         var n1 = Number.parseFloat(window.prompt('Digite um número: ')) //o comando prompt trata o dado como string, mesmo que seja número. É preciso fazer uma conversão de string para número para mudar isso. Essa conversão está sendo inserida no próprio comando da variável. Perceba que o prompt está dentro de parseFloat.   
         var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
         var s = n1 + n2
-        window.alert('A soma dos valores é: ' + s +'.')                
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}.`) //placeholder "${}" de Template String (ver página 18 do caderno) inseridas para escrita mais prática do código e leitura mais limpa. 
     </script>
     <!-- Convertendo String para Número em JS (esquemas de cores no bloquinho):
     - Number.parseInt(n) -> converte um número para um número inteiro.
