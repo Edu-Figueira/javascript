@@ -18,7 +18,11 @@
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
     <div>Clique em mim</div>
     <script>
-
+        var p1 = window.document.getElementsByTagName('p')[1] //o número entre conchetes seleciona qual p queremos, a contagem começa de 0
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        window.document.write('Está escrito assim: ' + p1.innerHTML) //reproduz a configuração de estilo de texto junto (aqui no caso, o negrito)
+        p1.style.color = 'blue'
+        window.alert(p1.innerText) //não reproduz as estilizações de texto
     </script>
 </body>
 </html>
