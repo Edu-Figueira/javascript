@@ -19,16 +19,9 @@
     <div id="msg">Clique em mim</div>
     <script>
         var p1 = window.document.getElementsByTagName('p')[1]
-        var d = window.document.getElementById('msg')
-        d.style.background = 'green'
-        //d.innerText = 'Estou aguardando... '
-        /*
-        MESMO COMANDO, SÓ QUE COMPLETO:
-
-        window.document.getElementById('msg').innerText = 'Estou aguardando'
-        */
-       d.document.getElementById('msg')
-
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'yellow'
+        d.style.background = 'orange'
     </script>
 </body>
 </html>
