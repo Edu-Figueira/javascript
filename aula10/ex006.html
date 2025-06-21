@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        div#area {
+            font: normal 20pt Arial;
+            background: rgb(89, 223, 89);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px; /*Define onde a linha do que escrevi começa!*/
+            text-align: center;
+        }
+    </style>
+</head>
+<body> <!--Exemplo de evento simples de clique feito diretamente aqui no html-->
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
+    </div>
+
+    <script>
+        var a = window.document.getElementById('area') /*Preciso de criar essa variável, pois esta será meu operador que atribuirá o elemento que quero atingir, ou seja, fará a ligação entre o meu conteúdo html e o meu comando JS.
+
+        Não é aconselhável colocá-lo assim, fora das funções por motivo de memória... mas é uma maneira de não ter que ficar digitando essa linha em todas as funções. Quando estudarmos ESCOPO, aprenderemos isso.*/
+        function clicar() {
+            a.innerText = 'Clicou!'
+            a.style.background = 'red'
+        }
+        function entrar() {
+            a.innerText = 'Entrou!'
+        }
+        function sair() {
+            a.innerText = 'Saiu!'
+            a.style.background = 'rgb(89, 223, 89)'
+        }
+    </script>
+</body>
+</html>
