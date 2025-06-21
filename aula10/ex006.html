@@ -16,15 +16,17 @@
         }
     </style>
 </head>
-<body> <!--Exemplo de evento simples de clique feito diretamente aqui no html-->
-    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+<body> <!--Exemplo de evento simples de clique feito com listeners do JS-->
+    <div id="area">
         Interaja...
     </div>
 
     <script>
-        var a = window.document.getElementById('area') /*Preciso de criar essa variável, pois esta será meu operador que atribuirá o elemento que quero atingir, ou seja, fará a ligação entre o meu conteúdo html e o meu comando JS.
+        var a = window.document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
 
-        Não é aconselhável colocá-lo assim, fora das funções por motivo de memória... mas é uma maneira de não ter que ficar digitando essa linha em todas as funções. Quando estudarmos ESCOPO, aprenderemos isso.*/
         function clicar() {
             a.innerText = 'Clicou!'
             a.style.background = 'red'
